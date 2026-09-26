@@ -196,6 +196,15 @@ ponuja tudi `/api/sites`, `/api/nearest` in `/api/weather` – uporabno, če
 želiš vedno sveže podatke ob vsaki zahtevi namesto urne osvežitve.
 Ni potrebnih API ključev.
 
+## Google Analytics
+
+Stran ima vgrajen GA4 (`gtag.js`, Measurement ID `G-61L9GS0YJL`) - koda
+je v `<head>` `public/index.html`, čim prej po `<meta viewport>` (kot
+priporoča Google, za čim manj izgubljenih meritev ob nalaganju). Sledi
+vsem obiskom te domene (`paragliding.fotra.net`) prek običajnega "Web"
+GA4 toka - ločenega toka za posamezne podstrani/poti znotraj iste
+domene ni treba dodajati (GA4 `page_view` meri vsak URL avtomatsko).
+
 ## Struktura projekta
 
 ```
