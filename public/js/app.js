@@ -62,7 +62,9 @@ const TRANSLATIONS = {
     colTemp: 'Temp.',
     colWind: 'Veter',
     colThermal: 'Termika',
-    colRain: 'Dež',
+    weatherRain: 'Dež',
+    weatherCloudy: 'Oblačno',
+    weatherSunny: 'Sončno',
     linksTitle: 'Povezave',
     footerSources: 'Podatki: ARSO (vreme.arso.gov.si, meteo.si), opendata.si, SkyTech.si. Ni uradna letalska napoved.',
     footerUpdated: (date) => `Stran posodobljena: ${date}`,
@@ -172,7 +174,9 @@ const TRANSLATIONS = {
     colTemp: 'Temp.',
     colWind: 'Wind',
     colThermal: 'Thermal',
-    colRain: 'Rain',
+    weatherRain: 'Rain',
+    weatherCloudy: 'Cloudy',
+    weatherSunny: 'Sunny',
     linksTitle: 'Links',
     footerSources: 'Data: ARSO (vreme.arso.gov.si, meteo.si), opendata.si, SkyTech.si. Not an official aviation forecast.',
     footerUpdated: (date) => `Page last updated: ${date}`,
@@ -751,6 +755,43 @@ function formatDayLabel(dateStr) {
   const d = new Date(dateStr);
   if (Number.isNaN(d.getTime())) return dateStr;
   return d.toLocaleDateString(dateLocale(), { weekday: 'short', day: 'numeric', month: 'numeric' });
+}
+
+/** Samo ime dneva, brez datuma - za prvi stolpec večdnevne napovedi
+ * (glej renderForecast), kjer je pod njim še ikona vremena (dnevni
+ * povzetek) in je datum odveč/preveč gnečen. */
+function formatDayNameOnly(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr);
+  if (Number.isNaN(d.getTime())) return dateStr;
+  return d.toLocaleDateString(dateLocale(), { weekday: 'short' });
+}
+
+/** Isti "pretežno oblačno" hevristika kot isOvercast() v
+ * src/paragliding.js (server-side, uporabljena za thermal oceno) - tu
+ * ponovljena na frontendu za dnevni ikonski povzetek vremena
+ * (dež/oblačno/sončno), ker server te klasifikacije ne pošilja
+ * neposredno, le surovo besedilo cloudCover. */
+function isOvercastText(cloudCoverText) {
+  const clouds = (cloudCoverText || '').toLowerCase();
+  if (/overcast|pretežno oblačno|popolnoma oblačno/.test(clouds)) return true;
+  if (/delno|delna|spremenljivo/.test(clouds)) return false;
+  return /\boblačno\b/.test(clouds);
+}
+
+/**
+ * Dnevni povzetek vremena kot ena ikona (dež > oblačno > sončno po
+ * prioriteti) - prikazana pod imenom dneva v večdnevni napovedi.
+ * Vrne null, če ni dovolj podatkov (ne prikažemo napačne ocene).
+ */
+function dayWeatherIcon(day) {
+  const entries = day.timeline || [];
+  const anyRain = entries.some((e) => e.precipitationMm !== null && e.precipitationMm !== undefined && e.precipitationMm > 1);
+  if (anyRain) return { icon: '🌧️', label: t('weatherRain') };
+  const cloudTexts = entries.map((e) => e.cloudCover).filter(Boolean);
+  if (cloudTexts.length === 0) return null;
+  const overcastShare = cloudTexts.filter((c) => isOvercastText(c)).length / cloudTexts.length;
+  return overcastShare > 0.5 ? { icon: '☁️', label: t('weatherCloudy') } : { icon: '☀️', label: t('weatherSunny') };
 }
 
 /** Vhod je vedno v km/h (tako jih vrača build-data.js) - pretvorimo v
@@ -1733,7 +1774,7 @@ function renderForecast(data) {
   el.forecastBody.innerHTML = data.forecast
     .map((day) => {
       const temps = day.timeline.map((e) => e.temperatureC).filter((t) => t !== null && t !== undefined);
-      const rain = day.timeline.some((e) => e.precipitationMm !== null && e.precipitationMm !== undefined && e.precipitationMm > 1);
+      const weather = dayWeatherIcon(day);
       const xc = day.thermalWindow && day.thermalWindow.xc;
       // Smer vetra ob najmočnejšem vetru čez dan - reprezentativna smer,
       // saj se čez dan lahko spreminja (glej WIND_ARROW_BY_SI_DIRECTION).
@@ -1749,11 +1790,10 @@ function renderForecast(data) {
         : '—';
       return `
         <tr>
-          <td>${formatDayLabel(day.date)}</td>
+          <td>${formatDayNameOnly(day.date)}${weather ? `<br><span class="day-weather-icon" title="${weather.label}">${weather.icon}</span>` : ''}</td>
           <td>${tMin !== null ? tMin + '–' + tMax + '°C' : '—'}</td>
           <td>${windText}</td>
           <td>${xc ? `<span class="${pillClass(xc.color)}">${translateRatingLabel(xc.label)}</span>` : '—'}</td>
-          <td>${rain ? '🌧️' : '—'}</td>
         </tr>
       `;
     })

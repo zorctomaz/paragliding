@@ -331,11 +331,14 @@ body:not(.is-night) #appContent {
 
 .verdict {
   display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
   padding: 4px 12px;
   border: 1px solid currentColor;
   font-size: 1.1rem;
   letter-spacing: 0.03em;
   margin: 4px 8px 4px 0;
+  overflow-wrap: break-word;
 }
 
 .verdict-green { color: var(--green); }
@@ -400,7 +403,9 @@ body:not(.is-night) #appContent {
 /* table-layout: fixed + eksplicitne širine stolpcev - brez tega stolpec
    TERMIKA (vsebuje .verdict pill, glej spodaj) v auto-layout tabeli
    prisili širino na "nezlomljeno" dolžino besedila pilla namesto na
-   dejansko (zavito) širino, kar potisne stolpec DEŽ čez rob zaslona. */
+   dejansko (zavito) širino, kar potisne zadnji stolpec čez rob zaslona.
+   DEŽ ni več ločen stolpec - vremenska ikona (dež/oblačno/sončno, glej
+   dayWeatherIcon() v app.js) je zdaj pod imenom dneva v stolpcu DAN. */
 .day-table {
   width: 100%;
   table-layout: fixed;
@@ -408,11 +413,10 @@ body:not(.is-night) #appContent {
   font-size: 1.05rem;
 }
 
-.day-table th:nth-child(1), .day-table td:nth-child(1) { width: 21%; }
-.day-table th:nth-child(2), .day-table td:nth-child(2) { width: 16%; }
-.day-table th:nth-child(3), .day-table td:nth-child(3) { width: 21%; }
-.day-table th:nth-child(4), .day-table td:nth-child(4) { width: 27%; }
-.day-table th:nth-child(5), .day-table td:nth-child(5) { width: 15%; }
+.day-table th:nth-child(1), .day-table td:nth-child(1) { width: 20%; }
+.day-table th:nth-child(2), .day-table td:nth-child(2) { width: 20%; }
+.day-table th:nth-child(3), .day-table td:nth-child(3) { width: 26%; }
+.day-table th:nth-child(4), .day-table td:nth-child(4) { width: 34%; }
 
 .day-table th,
 .day-table td {
@@ -425,6 +429,13 @@ body:not(.is-night) #appContent {
    sme lomiti sredi besede - ostali stolpci naj raje lomijo med besedami. */
 .day-table td:nth-child(4) {
   overflow-wrap: break-word;
+}
+
+.day-weather-icon {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
 .day-table th {
