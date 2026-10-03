@@ -65,6 +65,8 @@ const TRANSLATIONS = {
     colRain: 'Dež',
     linksTitle: 'Povezave',
     footerSources: 'Podatki: ARSO (vreme.arso.gov.si, meteo.si), opendata.si, SkyTech.si. Ni uradna letalska napoved.',
+    footerUpdated: (date) => `Stran posodobljena: ${date}`,
+    siteOwner: 'Lastnik strani: FOTRA®',
     stationDefaultTitle: 'Postaja',
     close: 'Zapri',
     langGroup: 'Jezik',
@@ -174,6 +176,8 @@ const TRANSLATIONS = {
     colRain: 'Rain',
     linksTitle: 'Links',
     footerSources: 'Data: ARSO (vreme.arso.gov.si, meteo.si), opendata.si, SkyTech.si. Not an official aviation forecast.',
+    footerUpdated: (date) => `Page last updated: ${date}`,
+    siteOwner: 'Site owner: FOTRA®',
     stationDefaultTitle: 'Station',
     close: 'Close',
     langGroup: 'Language',
@@ -454,6 +458,7 @@ const el = {
   linksBlock: document.getElementById('linksBlock'),
   linksList: document.getElementById('linksList'),
   disclaimerBox: document.getElementById('disclaimerBox'),
+  footerUpdated: document.getElementById('footerUpdated'),
   historyModalOverlay: document.getElementById('historyModalOverlay'),
   historyModalTitle: document.getElementById('historyModalTitle'),
   historyModalSnapshot: document.getElementById('historyModalSnapshot'),
@@ -1850,6 +1855,23 @@ function renderSynopticChart(data) {
   el.synopticChartBlock.hidden = false;
 }
 
+/**
+ * Datum zadnje izgradnje podatkov za trenutno prikazano vzletišče
+ * (data.generatedAt, nastavljen v src/paragliding.js ob vsakem teku
+ * build-data.js) v nogi strani - uporabniku pove, kako sveži so
+ * podatki, ne le da je stran "živa".
+ */
+function renderFooterMeta(data) {
+  const d = data.generatedAt ? new Date(data.generatedAt) : null;
+  if (!d || Number.isNaN(d.getTime())) {
+    el.footerUpdated.hidden = true;
+    return;
+  }
+  const dateLabel = d.toLocaleDateString(dateLocale(), { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  el.footerUpdated.textContent = t('footerUpdated', dateLabel);
+  el.footerUpdated.hidden = false;
+}
+
 function renderAll(data) {
   state.lastData = data;
   renderWindAloft(data);
@@ -1859,6 +1881,7 @@ function renderAll(data) {
   renderNearby(data);
   renderForecast(data);
   renderLinks(data);
+  renderFooterMeta(data);
   el.disclaimerBox.textContent = data.disclaimer;
   el.disclaimerBox.hidden = false;
   updateNightMode();

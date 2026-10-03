@@ -428,6 +428,23 @@ padala, oba vedno vidna, le trenutno aktivni poudarjen; na uporabnikovo
   EN načinu - gre za 12 ročno pisanih besedil, ki jih ni bilo smiselno
   mehansko prevajati.
 
+## Noga strani
+
+Pod viri podatkov (`footerSources`) sta še dve vrstici:
+- **Datum zadnje posodobitve** (`#footerUpdated`, `renderFooterMeta()`
+  v `app.js`) - prebran iz `data.generatedAt` (nastavljen v
+  `src/paragliding.js` ob vsakem teku `build-data.js`, torej ob vsaki
+  urni GitHub Action osvežitvi), prikazan kot poln datum z imenom dneva
+  (`toLocaleDateString(..., { weekday: 'long', ... })`) - uporabnik naj
+  takoj vidi, kako sveži so podatki na trenutno prikazanem vzletišču, ne
+  le splošen "zadnjič posodobljeno" brez konteksta. Če `data.generatedAt`
+  manjka ali ni veljaven datum, je vrstica skrita (ne prikaže napačnega
+  datuma).
+- **Lastnik strani** (`siteOwner`) - statična vrstica "Lastnik strani:
+  FOTRA®" (SI) / "Site owner: FOTRA®" (EN), del `data-i18n` sistema kot
+  ostala statična besedila (za razliko od `.brand-tagline`, ki ostane
+  enaka v obeh jezikih).
+
 ## Žive postaje vs. samo napoved
 
 Nekatera vzletišča imajo **potrjeno živo vremensko postajo**, druga le
