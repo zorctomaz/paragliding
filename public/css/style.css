@@ -408,10 +408,10 @@ body:not(.is-night) #appContent {
   font-size: 1.05rem;
 }
 
-.day-table th:nth-child(1), .day-table td:nth-child(1) { width: 19%; }
-.day-table th:nth-child(2), .day-table td:nth-child(2) { width: 15%; }
-.day-table th:nth-child(3), .day-table td:nth-child(3) { width: 19%; }
-.day-table th:nth-child(4), .day-table td:nth-child(4) { width: 32%; }
+.day-table th:nth-child(1), .day-table td:nth-child(1) { width: 21%; }
+.day-table th:nth-child(2), .day-table td:nth-child(2) { width: 16%; }
+.day-table th:nth-child(3), .day-table td:nth-child(3) { width: 21%; }
+.day-table th:nth-child(4), .day-table td:nth-child(4) { width: 27%; }
 .day-table th:nth-child(5), .day-table td:nth-child(5) { width: 15%; }
 
 .day-table th,
