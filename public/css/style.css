@@ -397,17 +397,34 @@ body:not(.is-night) #appContent {
   border-bottom: none;
 }
 
+/* table-layout: fixed + eksplicitne širine stolpcev - brez tega stolpec
+   TERMIKA (vsebuje .verdict pill, glej spodaj) v auto-layout tabeli
+   prisili širino na "nezlomljeno" dolžino besedila pilla namesto na
+   dejansko (zavito) širino, kar potisne stolpec DEŽ čez rob zaslona. */
 .day-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 1.05rem;
 }
+
+.day-table th:nth-child(1), .day-table td:nth-child(1) { width: 19%; }
+.day-table th:nth-child(2), .day-table td:nth-child(2) { width: 15%; }
+.day-table th:nth-child(3), .day-table td:nth-child(3) { width: 19%; }
+.day-table th:nth-child(4), .day-table td:nth-child(4) { width: 32%; }
+.day-table th:nth-child(5), .day-table td:nth-child(5) { width: 15%; }
 
 .day-table th,
 .day-table td {
   text-align: left;
   padding: 8px 6px;
   border-bottom: 1px dotted var(--cyan-dim);
+}
+
+/* Samo stolpec TERMIKA (daljše, lahko vezane besede v .verdict pillu)
+   sme lomiti sredi besede - ostali stolpci naj raje lomijo med besedami. */
+.day-table td:nth-child(4) {
+  overflow-wrap: break-word;
 }
 
 .day-table th {
