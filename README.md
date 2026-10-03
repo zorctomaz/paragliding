@@ -440,10 +440,8 @@ Pod viri podatkov (`footerSources`) sta še dve vrstici:
   le splošen "zadnjič posodobljeno" brez konteksta. Če `data.generatedAt`
   manjka ali ni veljaven datum, je vrstica skrita (ne prikaže napačnega
   datuma).
-- **Lastnik strani** (`siteOwner`) - statična vrstica "Lastnik strani:
-  FOTRA®" (SI) / "Site owner: FOTRA®" (EN), del `data-i18n` sistema kot
-  ostala statična besedila (za razliko od `.brand-tagline`, ki ostane
-  enaka v obeh jezikih).
+- **Lastnik strani** - statična vrstica "FOTRA®", izven `data-i18n`
+  sistema (enaka v obeh jezikih, podobno kot `.brand-tagline`).
 
 ## Žive postaje vs. samo napoved
 
