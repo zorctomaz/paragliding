@@ -82,7 +82,12 @@ async function fetchAllStations() {
   try {
     const result = await fetchJsonCached(SKYTECH_API_BASE + '?latest=1', {
       ttlMs: 10 * 60 * 1000,
-      timeoutMs: 8000,
+      // 15s namesto 8s: 2026-10-17 je ta klic (vseh ~85 postaj naenkrat)
+      // nekaj ur dosledno padal s "This operation was aborted" (timeout),
+      // medtem ko je fetchStationHistory (lažji, ena postaja) v istih
+      // tekih dosledno uspeval - kaže na to, da je API samo prepočasen
+      // za ta težji klic, ne popolnoma nedosegljiv.
+      timeoutMs: 15000,
       headers: { 'X-Api-Key': token },
     });
 
