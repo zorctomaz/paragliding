@@ -1,205 +1,185 @@
 {
-  "baseTime": "2026-11-13T00:00:00.000Z",
+  "baseTime": "2026-11-13T12:00:00.000Z",
   "frames": [
     {
       "stepHours": 0,
-      "url": "https://charts.ecmwf.int/content/20261113054739-70fc11bb982627a7422dc5295885aa9cc88ff9ed.png",
-      "validTime": "2026-11-13T00:00:00.000Z"
-    },
-    {
-      "stepHours": 6,
-      "url": "https://charts.ecmwf.int/content/20261113054858-a3e6d99a13b9c67820e1b7ffa5cf34a5c72f0e32.png",
-      "validTime": "2026-11-13T06:00:00.000Z"
-    },
-    {
-      "stepHours": 12,
-      "url": "https://charts.ecmwf.int/content/20261113055115-bbec877eb1d3046f1be71379a13dbc451cf2e882.png",
+      "url": "https://charts.ecmwf.int/content/20261113180002-06220c342e98c443d0f1cdf123c1a2c1c88c0a9c.png",
       "validTime": "2026-11-13T12:00:00.000Z"
     },
     {
-      "stepHours": 18,
-      "url": "https://charts.ecmwf.int/content/20261113055829-fcf99c43210299d1be07343f291a128db370181b.png",
+      "stepHours": 6,
+      "url": "https://charts.ecmwf.int/content/20261113180305-2dc3af6f843abd07d966cd26801063fc318a937d.png",
       "validTime": "2026-11-13T18:00:00.000Z"
     },
     {
-      "stepHours": 24,
-      "url": "https://charts.ecmwf.int/content/20261113055619-c756141ae139fdb61bb54c3906ea7afb4d2650ec.png",
+      "stepHours": 12,
+      "url": "https://charts.ecmwf.int/content/20261113180504-73618851a645fa6236f662cd26c3f9570431e71a.png",
       "validTime": "2026-11-14T00:00:00.000Z"
     },
     {
-      "stepHours": 30,
-      "url": "https://charts.ecmwf.int/content/20261113055656-6b4a48b259f4eda08968fbd20d2a124fd6633dfa.png",
+      "stepHours": 18,
+      "url": "https://charts.ecmwf.int/content/20261113180709-ef0e05f84f9532e08be6112f9e138e9f0cff55d7.png",
       "validTime": "2026-11-14T06:00:00.000Z"
     },
     {
-      "stepHours": 36,
-      "url": "https://charts.ecmwf.int/content/20261113055739-b6a580044c112e6bccd594ccd114858cc543a42e.png",
+      "stepHours": 24,
+      "url": "https://charts.ecmwf.int/content/20261113180840-1637269022c06f18fadb9ec51aa8e336c6b845d9.png",
       "validTime": "2026-11-14T12:00:00.000Z"
     },
     {
-      "stepHours": 42,
-      "url": "https://charts.ecmwf.int/content/20261113060520-ed23f93fd0f193a97ebe18eca0c8d40913d9ba3d.png",
+      "stepHours": 30,
+      "url": "https://charts.ecmwf.int/content/20261113180922-88591a404fdee140c708baefe8914d7ffb3fc9ad.png",
       "validTime": "2026-11-14T18:00:00.000Z"
     },
     {
-      "stepHours": 48,
-      "url": "https://charts.ecmwf.int/content/20261113060116-2572a96a63c5884fd6b96e8991a5de38b7bf03df.png",
+      "stepHours": 36,
+      "url": "https://charts.ecmwf.int/content/20261113180711-b956c400021e1be91d866225f9a87fdccee2fb1e.png",
       "validTime": "2026-11-15T00:00:00.000Z"
     },
     {
-      "stepHours": 54,
-      "url": "https://charts.ecmwf.int/content/20261113160738-302e61a71b7a9eff4eabff50be58edb1ed27272d.png",
+      "stepHours": 42,
+      "url": "https://charts.ecmwf.int/content/20261113181117-f83f5d6c0f6b5a20ab20a753b38b4acfb6735a68.png",
       "validTime": "2026-11-15T06:00:00.000Z"
     },
     {
-      "stepHours": 60,
-      "url": "https://charts.ecmwf.int/content/20261113160747-df51678ace98a401eb04bb57ad2209c61cfec802.png",
+      "stepHours": 48,
+      "url": "https://charts.ecmwf.int/content/20261113181137-50017541b21858ab801155101fd97926b3de8356.png",
       "validTime": "2026-11-15T12:00:00.000Z"
     },
     {
-      "stepHours": 66,
-      "url": "https://charts.ecmwf.int/content/20261113160755-ecc5fce81cbb178815773535c744b30089e3f56b.png",
+      "stepHours": 54,
+      "url": "https://charts.ecmwf.int/content/20261114030318-bb0025f3a04cc5f01c35266b3aa3409f2e7fe6ae.png",
       "validTime": "2026-11-15T18:00:00.000Z"
     },
     {
-      "stepHours": 72,
-      "url": "https://charts.ecmwf.int/content/20261113060722-5477cda38b5db8d55d869d3fa33914cb57317187.png",
+      "stepHours": 60,
+      "url": "https://charts.ecmwf.int/content/20261113180720-e11e15c9a4d63e3641111487d2473678d6a8eedb.png",
       "validTime": "2026-11-16T00:00:00.000Z"
     },
     {
-      "stepHours": 78,
-      "url": "https://charts.ecmwf.int/content/20261113160810-778360f384b5550a1e7b19e047509897b5339bb5.png",
-      "validTime": "2026-11-16T06:00:00.000Z"
-    },
-    {
-      "stepHours": 84,
-      "url": "https://charts.ecmwf.int/content/20261113160819-323141cee8cdf6d69234a624f8c392fd4fc103b8.png",
+      "stepHours": 72,
+      "url": "https://charts.ecmwf.int/content/20261113214922-deefd0e4fc81ea815c7e0b13fd1fddbd36cea01e.png",
       "validTime": "2026-11-16T12:00:00.000Z"
     },
     {
-      "stepHours": 90,
-      "url": "https://charts.ecmwf.int/content/20261113160828-e1406af66d2b8ea58d55349379f00742d4d86adc.png",
+      "stepHours": 78,
+      "url": "https://charts.ecmwf.int/content/20261114030400-007273e31998f1f3bdaed2ed5bd704844bb65820.png",
       "validTime": "2026-11-16T18:00:00.000Z"
     },
     {
-      "stepHours": 96,
-      "url": "https://charts.ecmwf.int/content/20261113070717-0b035e637f671949ab64770be6e742b407f809a6.png",
+      "stepHours": 84,
+      "url": "https://charts.ecmwf.int/content/20261113191413-7b090dd55796274c69195a288368330412fea0d4.png",
       "validTime": "2026-11-17T00:00:00.000Z"
     },
     {
-      "stepHours": 102,
-      "url": "https://charts.ecmwf.int/content/20261113160843-007ab67e1c5a56b348780919e6fe171e350b97da.png",
+      "stepHours": 90,
+      "url": "https://charts.ecmwf.int/content/20261114030419-cf917f6ffb783f61ed9dd8f485216d0cc679e00b.png",
       "validTime": "2026-11-17T06:00:00.000Z"
     },
     {
-      "stepHours": 108,
-      "url": "https://charts.ecmwf.int/content/20261113160851-4c7180ea19f64a48432fba55e596f6b3116ccc7a.png",
+      "stepHours": 96,
+      "url": "https://charts.ecmwf.int/content/20261114030431-ed3edb88e6f15d076a9e6bcca1aa3ecd17678136.png",
       "validTime": "2026-11-17T12:00:00.000Z"
     },
     {
-      "stepHours": 114,
-      "url": "https://charts.ecmwf.int/content/20261113160859-23774df61e8d018648c79ec06111caea74bec985.png",
-      "validTime": "2026-11-17T18:00:00.000Z"
-    },
-    {
-      "stepHours": 120,
-      "url": "https://charts.ecmwf.int/content/20261113070712-e6872c5735144372192e3e7a1c97e49ee38e8f29.png",
+      "stepHours": 108,
+      "url": "https://charts.ecmwf.int/content/20261113191416-0c334a14b85443182fba325bd56b6fa7e30f865b.png",
       "validTime": "2026-11-18T00:00:00.000Z"
     },
     {
-      "stepHours": 126,
-      "url": "https://charts.ecmwf.int/content/20261113160914-15ee5502e75fb6a91a11391fa0b2bb260dca6be1.png",
+      "stepHours": 114,
+      "url": "https://charts.ecmwf.int/content/20261114030508-5aa3db9b74cb6a6ccfb2b11e8f7abe2631366e07.png",
       "validTime": "2026-11-18T06:00:00.000Z"
     },
     {
-      "stepHours": 132,
-      "url": "https://charts.ecmwf.int/content/20261113160922-57078a87fd4f92663dfb3dc727ad918367c3cbd8.png",
+      "stepHours": 120,
+      "url": "https://charts.ecmwf.int/content/20261114030521-091e9dc8820f60a69a25946592e1a64d52658987.png",
       "validTime": "2026-11-18T12:00:00.000Z"
     },
     {
-      "stepHours": 138,
-      "url": "https://charts.ecmwf.int/content/20261113160931-c08eef11511af2c6bc42de806ca9d2afc055a607.png",
+      "stepHours": 126,
+      "url": "https://charts.ecmwf.int/content/20261114030537-1be853c5ff049b6573b747ad7aaf8cbc6c220466.png",
       "validTime": "2026-11-18T18:00:00.000Z"
     },
     {
-      "stepHours": 144,
-      "url": "https://charts.ecmwf.int/content/20261113070729-ed87e468fb8d1b14e6538e183bb236741f5f4e74.png",
+      "stepHours": 132,
+      "url": "https://charts.ecmwf.int/content/20261113191420-107070a748fb1aad1e1024150f3b80b3604dbb36.png",
       "validTime": "2026-11-19T00:00:00.000Z"
     },
     {
-      "stepHours": 150,
-      "url": "https://charts.ecmwf.int/content/20261113160946-e879acc6c30c1e47cbacca8cc193af53ceac2300.png",
+      "stepHours": 138,
+      "url": "https://charts.ecmwf.int/content/20261114030556-1f02fc3788b991dfae4b9934dbc8c14f200aa408.png",
       "validTime": "2026-11-19T06:00:00.000Z"
     },
     {
-      "stepHours": 156,
-      "url": "https://charts.ecmwf.int/content/20261113160954-41cd1ccc3f7b4a7c022638006aff5637385c845d.png",
+      "stepHours": 144,
+      "url": "https://charts.ecmwf.int/content/20261114030609-045c447405717b3217601403db8eac295637e644.png",
       "validTime": "2026-11-19T12:00:00.000Z"
     },
     {
-      "stepHours": 162,
-      "url": "https://charts.ecmwf.int/content/20261113161003-1dd344bd343c66158fbd278ced21ad3b32706fcf.png",
+      "stepHours": 150,
+      "url": "https://charts.ecmwf.int/content/20261114030622-26e907a4a0b83b976b9b27f2bb4302fbf5e5f225.png",
       "validTime": "2026-11-19T18:00:00.000Z"
     },
     {
-      "stepHours": 168,
-      "url": "https://charts.ecmwf.int/content/20261113070728-be3d5f3ff256337419fcc9f2c3b66e0a033fe28e.png",
+      "stepHours": 156,
+      "url": "https://charts.ecmwf.int/content/20261113191423-812b3a982ffd4b6ab2ca904f317f3c0547cf2201.png",
       "validTime": "2026-11-20T00:00:00.000Z"
     },
     {
-      "stepHours": 174,
-      "url": "https://charts.ecmwf.int/content/20261113161018-e65950656806f36fada6a981fa337e5955be49ef.png",
+      "stepHours": 162,
+      "url": "https://charts.ecmwf.int/content/20261114030646-df50343a4512760591f6d98a2658527c0edfce54.png",
       "validTime": "2026-11-20T06:00:00.000Z"
     },
     {
-      "stepHours": 180,
-      "url": "https://charts.ecmwf.int/content/20261113161026-13fe63a86bcb323728fd432daa4423618c1770fc.png",
+      "stepHours": 168,
+      "url": "https://charts.ecmwf.int/content/20261114030656-9a49fa643e8c6f5f23be0ca3cb7559392532bd5a.png",
       "validTime": "2026-11-20T12:00:00.000Z"
     },
     {
-      "stepHours": 186,
-      "url": "https://charts.ecmwf.int/content/20261113161035-1c1c3b3bbb24a7f2840d3d30a8db9b5b8f99b2b5.png",
+      "stepHours": 174,
+      "url": "https://charts.ecmwf.int/content/20261114030708-8456effe9485608babf83a4c7ce41dd9ae400c76.png",
       "validTime": "2026-11-20T18:00:00.000Z"
     },
     {
-      "stepHours": 192,
-      "url": "https://charts.ecmwf.int/content/20261113070729-d93f168762497d33b54d2cabf91304d809502855.png",
+      "stepHours": 180,
+      "url": "https://charts.ecmwf.int/content/20261113191426-17f5642be362aaef7a1b01d121245f20aa774e5a.png",
       "validTime": "2026-11-21T00:00:00.000Z"
     },
     {
-      "stepHours": 198,
-      "url": "https://charts.ecmwf.int/content/20261113161050-0ede4a69cf52b4a2329c68d4bc33f717dcb9535c.png",
+      "stepHours": 186,
+      "url": "https://charts.ecmwf.int/content/20261114030727-f41df51a3d860abe7e7fb2afac7e01fa2431a470.png",
       "validTime": "2026-11-21T06:00:00.000Z"
     },
     {
       "stepHours": 204,
-      "url": "https://charts.ecmwf.int/content/20261113161058-d547c8f9af2fa6f813c53580eb8d8cc8d593b5d5.png",
-      "validTime": "2026-11-21T12:00:00.000Z"
-    },
-    {
-      "stepHours": 210,
-      "url": "https://charts.ecmwf.int/content/20261113161107-04d7e337f28de58370050e61fe842049fa0e3324.png",
-      "validTime": "2026-11-21T18:00:00.000Z"
-    },
-    {
-      "stepHours": 216,
-      "url": "https://charts.ecmwf.int/content/20261113070733-3aebfecf273bb6f54cbf318796a284eb8bfdf26d.png",
+      "url": "https://charts.ecmwf.int/content/20261113191430-866618a1231f88c607c4a51703499ff82a569086.png",
       "validTime": "2026-11-22T00:00:00.000Z"
     },
     {
-      "stepHours": 222,
-      "url": "https://charts.ecmwf.int/content/20261113161123-82f4553b029abf0319a231524c63de970679a404.png",
+      "stepHours": 210,
+      "url": "https://charts.ecmwf.int/content/20261114030826-e040e4652a221edd5bb7949d942693b08f474047.png",
       "validTime": "2026-11-22T06:00:00.000Z"
     },
     {
-      "stepHours": 234,
-      "url": "https://charts.ecmwf.int/content/20261113161149-b332a834653f8f824d302cdeecaf0433ee24b50d.png",
+      "stepHours": 216,
+      "url": "https://charts.ecmwf.int/content/20261114030841-cd3283a1b6f5f910e978f57bd5c5d3ed1bb7e457.png",
+      "validTime": "2026-11-22T12:00:00.000Z"
+    },
+    {
+      "stepHours": 222,
+      "url": "https://charts.ecmwf.int/content/20261114030856-63b6f6294fb2f98d0a32920104762a8236f7118e.png",
       "validTime": "2026-11-22T18:00:00.000Z"
     },
     {
-      "stepHours": 240,
-      "url": "https://charts.ecmwf.int/content/20261113070742-3d83150961267ad91c5fc300da4bf232b851c018.png",
+      "stepHours": 228,
+      "url": "https://charts.ecmwf.int/content/20261113191433-7ca144291585e6c4a94cd466b227076183b3a6aa.png",
       "validTime": "2026-11-23T00:00:00.000Z"
+    },
+    {
+      "stepHours": 234,
+      "url": "https://charts.ecmwf.int/content/20261114030914-2244e5293d54f4538a77eb4fb19c1a651cbaf570.png",
+      "validTime": "2026-11-23T06:00:00.000Z"
     }
   ]
 }
